@@ -1,7 +1,0 @@
-{
-  "name": "CeloCashAgent",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
