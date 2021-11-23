@@ -7,7 +7,14 @@ import { HomePage } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
 
 import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
+import { QRScanner } from '@ionic-native/qr-scanner/ngx'
+import { CapacitorGoogleMaps } from '@capacitor-community/capacitor-googlemaps-native';
+
 import { CashInComponent } from './cash-in/cash-in.component';
+import { CashOutComponent } from './cash-out/cash-out.component';
+import { FindAgentComponent } from './find-agent/find-agent.component';
+
+
 
 
 
@@ -17,8 +24,9 @@ import { CashInComponent } from './cash-in/cash-in.component';
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
-    NgxQRCodeModule
+    NgxQRCodeModule,
   ],
-  declarations: [HomePage,CashInComponent,]
+  declarations: [HomePage,CashInComponent,CashOutComponent, FindAgentComponent],
+  providers: [QRScanner]
 })
 export class HomePageModule {}

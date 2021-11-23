@@ -9,6 +9,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
 
+import { QRScanner } from '@ionic-native/qr-scanner/ngx';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
