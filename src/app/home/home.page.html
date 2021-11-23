@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      CELO CASH AGENT
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+  
+  <ion-card style="box-shadow: none !important; border: #72c3fb solid 2px; background-color: #72c3fb;">
+    <ion-card-header>
+      <ion-card-subtitle>Welcome Issa</ion-card-subtitle>
+      <ion-card-title>Account Balance:</ion-card-title>
+      <ion-card-subtitle style="text-align: left;">cZAR: 30</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-row>
+        <ion-col size="6">
+          <ion-button #cashIn (click)="onClick('cashin')" expand="block" fill="solid" shape="round">
+            cash in
+          </ion-button> 
+        </ion-col>
+        <ion-col size="6">
+          <ion-button #cashOut (click)="onClick('cashout')" expand="block" fill="solid" shape="round">
+            cash out
+          </ion-button>
+        </ion-col>
+      </ion-row>  
+    </ion-card-content>
+  </ion-card>
+
+  <ion-grid fixed class="ion-no-padding">
+    <ion-row *ngFor="let row of cardRows" class="ion-no-padding">
+      <ion-col size="4" *ngFor="let col of row" class="ion-no-padding">
+        <ion-card button (click)="displayModal(col)" style="height: fit-content;">
+          <ion-card-content style="text-align: center;">
+            <div>
+              <ion-icon slot="start" name="{{col.icon}}" size="large"></ion-icon>
+            </div>
+            <ion-label>{{col.name}}</ion-label>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>  
+    </ion-row>  
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+  </ion-toolbar>
+</ion-footer>
+
+<style>
+  ion-content.background{
+    --background: url(../../assets/img/app_background.jpg) 0 0/100% 100% no-repeat;
+  }
+</style>
+

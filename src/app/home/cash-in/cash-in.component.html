@@ -1,0 +1,52 @@
+<!-- <ion-header>
+  <ion-toolbar translucent>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header> -->
+<ion-content>
+  <div *ngIf="!showQRCode">
+
+    <ion-card style="height: fit-content;">
+      <ion-card-header>
+        <ion-card-subtitle></ion-card-subtitle>
+        <ion-card-title>Cash-In @ Agent</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-label>Please enter the cZAR value to cash in</ion-label>
+        <ion-item>
+          <ion-label position="floating">Enter amount</ion-label>
+          <ion-input [(ngClass)]="amount"></ion-input>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  
+    <ion-button (click)="showQR()" expand="block" fill="solid" shape="round">
+      Generate Cash-In QR
+    </ion-button>
+
+  </div>
+
+
+  <div style="text-align: center; height: 100%; width: 100%;" *ngIf="showQRCode">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Allow agent to scan the QR Code</ion-card-subtitle>
+        <br>
+        <ion-card-title>QR Code: </ion-card-title>
+      </ion-card-header>
+      <br>
+      <ion-card-content>
+        <ngx-qrcode
+        [elementType]="elementType"
+        [errorCorrectionLevel]="correctionLevel"
+        [value]="value">
+        </ngx-qrcode>
+      </ion-card-content>
+    </ion-card>
+    
+  
+  </div>
+
+</ion-content>
+
+
