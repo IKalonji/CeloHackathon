@@ -1,3 +1,24 @@
-<p>
-  cash-out works!
-</p>
+<ion-header [translucent]="true">
+  <ion-toolbar >
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div *ngIf="!showScanner">
+    <ion-card>
+      <ion-card-content style="text-align: center;">
+        <ion-label>Please confirm cash out amount with the agent</ion-label>
+      </ion-card-content>
+    </ion-card>
+  
+    <ion-button (click)="amountConfirmed()" expand="block" fill="solid" shape="round" color="secondary">
+      Amount Confirmed
+    </ion-button>
+  </div>
+  <div *ngIf="showScanner">
+    <div style="text-align: center;">
+      <ion-label>Scan the Agents QR</ion-label>
+    </div>
+    <div #body id=body></div>
+  </div>
+  
+</ion-content>

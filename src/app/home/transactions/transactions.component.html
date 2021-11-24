@@ -1,3 +1,20 @@
-<p>
-  transactions works!
-</p>
+<ion-header>
+  <ion-toolbar style="text-align: center;">
+    <ion-title>Transactions</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div *ngFor="let transaction of transactions">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Date: {{transaction.date}}</ion-card-subtitle>
+        <ion-card-title>{{transaction.type}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-label>txID: {{transaction.txID}}</ion-label><br>
+        <ion-label>WalletID: {{transaction.wallet}}</ion-label><br>
+        <ion-label>Amount: {{transaction.amount}}</ion-label>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

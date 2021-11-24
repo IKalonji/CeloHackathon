@@ -7,8 +7,41 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TransactionsComponent implements OnInit {
 
+  transactions = Transactions;
+
   constructor() { }
 
   ngOnInit() {}
 
 }
+
+export const Transactions = [
+  {
+    date: "12/01/2021",
+    type: "Cash in",
+    wallet: "sgvdhfrghfjgjgjgj",
+    txID: "12345",
+    amount: "cZAR 50"
+  },
+  {
+    date: "12/01/2021",
+    type: "Cash out",
+    wallet: "sgvdhfrghfjgjgjgj",
+    txID: "12345",
+    amount: "cZAR 50"
+  },
+  {
+    date: "12/01/2021",
+    type: "Cash in",
+    wallet: "sgvdhfrghfjgjgjgj",
+    txID: "12345",
+    amount: "cZAR 50"
+  },
+  {
+    date: "12/01/2021",
+    type: "Cash out",
+    wallet: "sgvdhfrghfjgjgjgj",
+    txID: "12345",
+    amount: "cZAR 50"
+  },
+]

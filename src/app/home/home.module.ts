@@ -13,6 +13,7 @@ import { CapacitorGoogleMaps } from '@capacitor-community/capacitor-googlemaps-n
 import { CashInComponent } from './cash-in/cash-in.component';
 import { CashOutComponent } from './cash-out/cash-out.component';
 import { FindAgentComponent } from './find-agent/find-agent.component';
+import { TransactionsComponent } from './transactions/transactions.component';
 
 
 
@@ -26,7 +27,7 @@ import { FindAgentComponent } from './find-agent/find-agent.component';
     HomePageRoutingModule,
     NgxQRCodeModule,
   ],
-  declarations: [HomePage,CashInComponent,CashOutComponent, FindAgentComponent],
+  declarations: [HomePage,CashInComponent,CashOutComponent, FindAgentComponent, TransactionsComponent],
   providers: [QRScanner]
 })
 export class HomePageModule {}

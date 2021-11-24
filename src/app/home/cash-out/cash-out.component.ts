@@ -9,6 +9,8 @@ import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner/ngx';
   styleUrls: ['./cash-out.component.scss'],
 })
 export class CashOutComponent implements OnInit {
+  
+  showScanner: boolean = false;
 
   constructor(private qrScanner: QRScanner) { } //
 
@@ -40,9 +42,8 @@ export class CashOutComponent implements OnInit {
       } 
     })
   }
+
+  amountConfirmed(){
+    this.showScanner = true;
+  }
 }
-
-/*
-
-
-*/
